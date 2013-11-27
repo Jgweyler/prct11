@@ -1,5 +1,4 @@
-#Práctica 10
+Práctica 11
 ==============================================================
 
-Esta práctica consiste en desarrollar una gema para la realización de operaciones con matrices. 
-Las matrices han de ser densas y dispersas y además pueden contener números racionales. 
+Con el desarrollo de la gema para el tratamiento de matrices (_Práctica 10_), usaremos la herramienta **RDoc** para generar la documentación y desarrollaremos los métodos que habíamos definido previamente pero usando programación funcional.
