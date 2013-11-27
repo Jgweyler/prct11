@@ -27,8 +27,8 @@ class Matriz
   	def +(other)
 		raise ArgumentError, "No tienen las mismas dimensiones " unless @filas == other.filas && @columnas == other.columnas
 		matriz_suma = Array.new
-		for i in 0...@filas
-			for j in 0...@columnas do
+		@filas.times do |i|
+			@columnas.times do |j|
 				matriz_suma << (self[i,j] + other[i,j])
 			end
 		end
@@ -38,15 +38,38 @@ class Matriz
 	def -(other)	
 		raise ArgumentError, "No tienen las mismas dimensiones " unless @filas == other.filas && @columnas == other.columnas
 		matriz_resta = Array.new
-		for i in 0...@filas do
-			for j in 0...@columnas do
+		@filas.times do |i|
+			@columnas.times do |j|
 				matriz_resta << (self[i,j] - other[i,j])
 			end
       	end
 		Matriz.constructor(@filas, @columnas, matriz_resta)
   	end
 
-	def ==(other)
+	def *(other)
+		if(other.is_a? Numeric)
+			matriz_producto = Array.new
+			@filas.times do |i|
+				@columnas.times do |j|
+					matriz_producto << (self[i,j] * other)		
+        			end
+			end
+		        Matriz.constructor(@filas,@columnas,matriz_producto)    
+		elsif ((other.is_a?(Matriz) == true) && (@columnas == other.filas))
+            		matriz_producto = Array.new
+		    	@filas.times do |i|
+		        	other.columnas.times do |j|
+		            		matriz_producto << 0
+		            		@columnas.times do |k|
+						matriz_producto[(matriz_producto.size)-1] = (matriz_producto.last + (self[i,k] * other[k,j]))
+		            		end
+		        	end
+			end
+            		Matriz.constructor(@filas,other.columnas,matriz_producto)
+		end
+	end
+
+ 	def ==(other)
 		if ((@filas == other.filas) && (@columnas == other.columnas))
 			i = 0
 			while (i < @filas) do
@@ -62,42 +85,9 @@ class Matriz
 				i = i + 1
 			end
 		end
-		return true #si compara todos los elementos y son iguales devuelve verdadero
+		return true 
 	end 
 
-	def *(other)
-		if(other.is_a? Numeric)
-			matriz_producto = Array.new
-      		i=0
-			while (i < @filas)
-				j=0
-				while (j < @columnas)
-					matriz_producto << (self[i,j] * other)
-					j = j+1
-        		end
-				i = i+1
-			end
-			Matriz.constructor(@filas,@columnas,matriz_producto)    
-		elsif ((other.is_a?(Matriz) == true) && (@columnas == other.filas))
-			i=0
-            matriz_producto = Array.new
-            while (i < @filas)
-				j = 0
-                while (j < other.columnas)
-					k = 0
-                    matriz_producto << 0
-                    while (k < @columnas) #itera en las columnas de la primera matriz y las filas de la segunda
-						matriz_producto[(matriz_producto.size)-1] = (matriz_producto.last + (self[i,k] * other[k,j]))
-                        k = k + 1
-                    end
-                    j = j + 1
-                end
-				i = i + 1
-			end
-            Matriz.constructor(@filas,other.columnas,matriz_producto)
-		end
-	end
- 
 	def max()
 		maximo = 0 
 		i, j = 0,0
