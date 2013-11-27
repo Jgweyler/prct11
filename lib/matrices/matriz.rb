@@ -24,6 +24,7 @@ class Matriz
       	end
   	end
 	
+	#Método suma
   	def +(other)
 		raise ArgumentError, "No tienen las mismas dimensiones " unless @filas == other.filas && @columnas == other.columnas
 		matriz_suma = Array.new
@@ -35,6 +36,7 @@ class Matriz
 		Matriz.constructor(@filas, @columnas, matriz_suma)
     end
   
+	#Método resta
 	def -(other)	
 		raise ArgumentError, "No tienen las mismas dimensiones " unless @filas == other.filas && @columnas == other.columnas
 		matriz_resta = Array.new
@@ -46,6 +48,7 @@ class Matriz
 		Matriz.constructor(@filas, @columnas, matriz_resta)
   	end
 
+	#Método producto
 	def *(other)
 		if(other.is_a? Numeric)
 			matriz_producto = Array.new
@@ -57,37 +60,36 @@ class Matriz
 		        Matriz.constructor(@filas,@columnas,matriz_producto)    
 		elsif ((other.is_a?(Matriz) == true) && (@columnas == other.filas))
             		matriz_producto = Array.new
-		    	@filas.times do |i|
-		        	other.columnas.times do |j|
-		            		matriz_producto << 0
-		            		@columnas.times do |k|
+			@filas.times do |i|
+				other.columnas.times do |j|
+					matriz_producto << 0
+		            @columnas.times do |k|
 						matriz_producto[(matriz_producto.size)-1] = (matriz_producto.last + (self[i,k] * other[k,j]))
-		            		end
-		        	end
+		            end
+		        end
 			end
-            		Matriz.constructor(@filas,other.columnas,matriz_producto)
+            Matriz.constructor(@filas,other.columnas,matriz_producto)
 		end
 	end
 
+	#Método de comparación
  	def ==(other)
 		if ((@filas == other.filas) && (@columnas == other.columnas))
 			i = 0
-			while (i < @filas) do
-				j = 0
-				while (j < @columnas) do
-					if (self[i,j] == other[i,j]) #comparamos elemento a elemento
+			@filas.times do |i|
+				@columnas.times do |j|
+					if (self[i,j] == other[i,j]) 
 						return true
 					else 
-						return false #si solo uno es distinto la funcion devuelve falso
+						return false 
 					end
-					j = j + 1
 				end
-				i = i + 1
 			end
 		end
 		return true 
 	end 
 
+	#Métodos máximo y mínimo
 	def max()
 		maximo = 0 
 		i, j = 0,0
@@ -118,6 +120,7 @@ class Matriz
 		return minimo
 	end
 
+	#Método to_s para mostrar la matriz como cadena de caracteres
 	def to_s
 		string= "[" 
 		fil=0
@@ -139,7 +142,8 @@ class Matriz
 		end
 		string = string + "]" 
 	end
-                     
+    
+    #Método para la conversión de tipo                 
   	def coerce(other)
     		[self,other]
   	end
