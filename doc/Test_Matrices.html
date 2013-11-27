@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Test_Matrices - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/tc_matrices.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Test::Unit::TestCase
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-tear_down">#tear_down</a>
+    
+    <li ><a href="#method-i-test_densas">#test_densas</a>
+    
+    <li ><a href="#method-i-test_dispersas">#test_dispersas</a>
+    
+    <li ><a href="#method-i-test_failure">#test_failure</a>
+    
+    <li ><a href="#method-i-test_fraccionarias">#test_fraccionarias</a>
+    
+    <li ><a href="#method-i-test_fracciones">#test_fracciones</a>
+    
+    <li ><a href="#method-i-test_max_min">#test_max_min</a>
+    
+    <li ><a href="#method-i-test_producto">#test_producto</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./matrices_gemspec.html">matrices.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Fraccion.html">Fraccion</a>
+  
+    <li><a href="./Matrices.html">Matrices</a>
+  
+    <li><a href="./Matriz.html">Matriz</a>
+  
+    <li><a href="./MatrizDensa.html">MatrizDensa</a>
+  
+    <li><a href="./MatrizDispersa.html">MatrizDispersa</a>
+  
+    <li><a href="./Test_Matrices.html">Test_Matrices</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Test_Matrices</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+        <span class="ruby-comment">#matrices densas</span>
+<span class="ruby-ivar">@mdensa1</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,[<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>,<span class="ruby-value">2</span>])
+        <span class="ruby-ivar">@mdensa2</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,[<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,<span class="ruby-value">4</span>,<span class="ruby-value">4</span>])
+        <span class="ruby-ivar">@mdensa3</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,[<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,<span class="ruby-value">3</span>])
+        
+        <span class="ruby-comment">#matrices dispersas</span>
+        <span class="ruby-ivar">@mdisp1</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,[<span class="ruby-value">1</span>,<span class="ruby-value">2</span>,<span class="ruby-value">3</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">4</span>])
+        <span class="ruby-ivar">@mdisp2</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,[<span class="ruby-value">2</span>,<span class="ruby-value">4</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">2</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>])
+        <span class="ruby-ivar">@mdisp3</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,[<span class="ruby-value">3</span>,<span class="ruby-value">6</span>,<span class="ruby-value">3</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">2</span>,<span class="ruby-value">0</span>,<span class="ruby-value">4</span>])
+        
+        <span class="ruby-comment">#numeros racionales</span>
+        <span class="ruby-ivar">@rac1</span> = <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>,<span class="ruby-value">2</span>)
+        <span class="ruby-ivar">@rac2</span> = <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">3</span>,<span class="ruby-value">4</span>)
+        <span class="ruby-ivar">@rac3</span> = <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">5</span>,<span class="ruby-value">6</span>)
+        <span class="ruby-ivar">@rac4</span> = <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">7</span>,<span class="ruby-value">8</span>)
+        <span class="ruby-ivar">@rac5</span> = <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">11</span>,<span class="ruby-value">8</span>)
+        <span class="ruby-ivar">@rac6</span> = <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">19</span>,<span class="ruby-value">12</span>)
+
+        <span class="ruby-comment">#matrices con fracciones</span>
+        <span class="ruby-ivar">@mfrac1</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>, [<span class="ruby-ivar">@rac1</span>,<span class="ruby-ivar">@rac2</span>,<span class="ruby-ivar">@rac3</span>,<span class="ruby-ivar">@rac4</span>])
+        <span class="ruby-ivar">@mfrac2</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,[<span class="ruby-ivar">@rac4</span>, <span class="ruby-ivar">@rac3</span>, <span class="ruby-ivar">@rac2</span>, <span class="ruby-ivar">@rac1</span>])
+        <span class="ruby-ivar">@mfrac3</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,[<span class="ruby-ivar">@rac5</span>,<span class="ruby-ivar">@rac6</span>,<span class="ruby-ivar">@rac6</span>,<span class="ruby-ivar">@rac5</span>])
+        <span class="ruby-ivar">@mfrac4</span> = <span class="ruby-constant">Matriz</span>.<span class="ruby-identifier">constructor</span>(<span class="ruby-value">3</span>,<span class="ruby-value">3</span>,[<span class="ruby-ivar">@rac5</span>,<span class="ruby-ivar">@rac6</span>,<span class="ruby-ivar">@rac6</span>,<span class="ruby-ivar">@rac5</span>,<span class="ruby-ivar">@rac3</span>,<span class="ruby-ivar">@rac2</span>,<span class="ruby-ivar">@rac3</span>,<span class="ruby-ivar">@rac2</span>,<span class="ruby-ivar">@rac1</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setup-method -->
+
+    
+      <div id="method-i-tear_down" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tear_down</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tear_down-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tear_down</span>
+        <span class="ruby-comment">#nothing</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- tear_down-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- tear_down-method -->
+
+    
+      <div id="method-i-test_densas" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_densas</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_densas-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_densas</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mdensa2</span>,(<span class="ruby-ivar">@mdensa1</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@mdensa1</span>))          <span class="ruby-comment">#suma</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mdensa1</span>, (<span class="ruby-ivar">@mdensa2</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@mdensa1</span>))              <span class="ruby-comment">#resta</span>
+        <span class="ruby-identifier">assert_equal</span>((<span class="ruby-ivar">@mdensa1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@mdensa2</span>).<span class="ruby-identifier">to_s</span>,(<span class="ruby-string">&#39;[[6,6],[12,12]]&#39;</span>))          
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_densas-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_densas-method -->
+
+    
+      <div id="method-i-test_dispersas" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_dispersas</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_dispersas-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_dispersas</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mdisp3</span>, (<span class="ruby-ivar">@mdisp2</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@mdisp1</span>))            <span class="ruby-comment">#suma</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mdisp1</span>, (<span class="ruby-ivar">@mdisp3</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@mdisp2</span>))    <span class="ruby-comment">#resta</span>
+        <span class="ruby-identifier">assert_equal</span>((<span class="ruby-ivar">@mdisp1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@mdisp2</span>).<span class="ruby-identifier">to_s</span>,(<span class="ruby-string">&#39;[[8,4,0],[0,0,0],[8,0,0]]&#39;</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_dispersas-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_dispersas-method -->
+
+    
+      <div id="method-i-test_failure" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_failure</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_failure-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_failure</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mfrac3</span>,(<span class="ruby-ivar">@mfrac1</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@mfrac2</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_failure-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_failure-method -->
+
+    
+      <div id="method-i-test_fraccionarias" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_fraccionarias</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_fraccionarias-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_fraccionarias</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mfrac3</span>,(<span class="ruby-ivar">@mfrac1</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@mfrac2</span>))
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mfrac1</span>, (<span class="ruby-ivar">@mfrac3</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@mfrac2</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_fraccionarias-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_fraccionarias-method -->
+
+    
+      <div id="method-i-test_fracciones" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_fracciones</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_fracciones-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_fracciones</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;1/2&quot;</span>, <span class="ruby-ivar">@rac1</span>.<span class="ruby-identifier">to_s</span>)
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;3/4&quot;</span>, <span class="ruby-ivar">@rac2</span>.<span class="ruby-identifier">to_s</span>)
+        <span class="ruby-identifier">assert_not_equal</span>(<span class="ruby-string">&quot;5/3&quot;</span>, <span class="ruby-ivar">@rac3</span>.<span class="ruby-identifier">to_s</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_fracciones-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_fracciones-method -->
+
+    
+      <div id="method-i-test_max_min" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_max_min</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_max_min-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_max_min</span>
+        <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mdisp1</span>.<span class="ruby-identifier">max</span>,<span class="ruby-value">3</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_max_min-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_max_min-method -->
+
+    
+      <div id="method-i-test_producto" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_producto</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_producto-source">
+            <pre><span class="ruby-comment"># File test/tc_matrices.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_producto</span>
+        <span class="ruby-comment">#dispersa * densa</span>
+        <span class="ruby-identifier">assert_equal</span>((<span class="ruby-ivar">@mdisp1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@mdensa3</span>).<span class="ruby-identifier">to_s</span>,(<span class="ruby-string">&#39;[[14,14,14],[0,0,0],[12,12,12]]&#39;</span>))
+        
+        <span class="ruby-comment">#dispersa * fraccionaria</span>
+        <span class="ruby-identifier">assert_equal</span>((<span class="ruby-ivar">@mdisp2</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@mfrac4</span>).<span class="ruby-identifier">to_s</span>,(<span class="ruby-string">&#39;[[33/4,13/2,37/6],[0/1,0/1,0/1],[11/4,19/6,19/6]]&#39;</span>))
+        
+        <span class="ruby-comment">#densa * fraccionaria</span>
+        <span class="ruby-identifier">assert_equal</span>((<span class="ruby-ivar">@mdensa1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@mfrac1</span>).<span class="ruby-identifier">to_s</span>,(<span class="ruby-string">&#39;[[4/3,13/8],[8/3,13/4]]&#39;</span>)) 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_producto-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_producto-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
